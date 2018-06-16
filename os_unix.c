@@ -210,7 +210,7 @@ void list_types(void) {
 // display version string
 //
 void print_version(void) {
-    Print (L"%s 0.3\n", progname);
+    Print (L"%s 0.3.1.iridium.jp\n", progname);
 }
 
 //
