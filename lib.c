@@ -87,6 +87,7 @@ MBR_PARTTYPE    mbr_types[] = {
     { 0xee, STR("EFI Protective") },
     { 0xef, STR("EFI System (FAT)") },
     { 0xfd, STR("Linux RAID") },
+    { 0xff, STR("XENIX bad block table / Apple APFS") },
     { 0, NULL },
 };
 
@@ -126,6 +127,7 @@ GPT_PARTTYPE    gpt_types[] = {
     { "\xEC\x19\xB5\x2D\x0E\xB1\xDC\x11\xB9\x9B\x00\x19\xD1\x87\x96\x48", 0xa9, STR("NetBSD CGD"), GPT_KIND_DATA },
     // From http://developer.apple.com/mac/library/technotes/tn2006/tn2166.html
     { "\x00\x53\x46\x48\x00\x00\xAA\x11\xAA\x11\x00\x30\x65\x43\xEC\xAC", 0xaf, STR("Mac OS X HFS+"), GPT_KIND_DATA },
+    { "\xEF\x57\x34\x7C\x00\x00\xAA\x11\xAA\x11\x00\x30\x65\x43\xEC\xAC", 0xff, STR("Apple APFS"), GPT_KIND_DATA },
     { "\x00\x53\x46\x55\x00\x00\xAA\x11\xAA\x11\x00\x30\x65\x43\xEC\xAC", 0xa8, STR("Mac OS X UFS"), GPT_KIND_DATA },
     { "\x74\x6F\x6F\x42\x00\x00\xAA\x11\xAA\x11\x00\x30\x65\x43\xEC\xAC", 0xab, STR("Mac OS X Boot"), GPT_KIND_DATA },
     { "\x44\x49\x41\x52\x00\x00\xAA\x11\xAA\x11\x00\x30\x65\x43\xEC\xAC", 0xac, STR("Apple RAID"), GPT_KIND_DATA },
